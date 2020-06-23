@@ -14,11 +14,11 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
   useEffect(() => {
-    POKEMONS.forEach((poke) => {
-      if (match.params.id === poke.id.toString()) {
-        setPokemon(poke);
-      }
-    });
+    fetch(`http://localhost:3001/pokemons/${match.params.id}`)
+      .then((response) => response.json())
+      .then((pokemon) => {
+        if (pokemon.id) setPokemon(pokemon); // verifie si l'id correspond à un pokemon
+      });
   }, [match.params.id]);
 
   return (
