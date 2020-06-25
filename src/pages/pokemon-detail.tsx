@@ -4,7 +4,7 @@ import { RouteComponentProps, Link } from "react-router-dom";
 import formatDate from "../helpers/format-date";
 import formatType from "../helpers/forma-type";
 import Pokemon from "../models/pokemon";
-import POKEMONS from "../models/mock-pokemon";
+import PokemonService from "../services/pokemon-service";
 
 type Params = { id: string };
 
@@ -14,11 +14,9 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/pokemons/${match.params.id}`)
-      .then((response) => response.json())
-      .then((pokemon) => {
-        if (pokemon.id) setPokemon(pokemon); // verifie si l'id correspond à un pokemon
-      });
+    PokemonService.getPokemon(+match.params.id).then((
+      pokemon // +match.params.id le + permet de convertir une chaine de character en nombre
+    ) => setPokemon(pokemon));
   }, [match.params.id]);
 
   return (
