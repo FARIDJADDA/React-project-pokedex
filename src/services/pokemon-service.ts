@@ -25,6 +25,7 @@ export default class PokemonService {
       .then((response) => response.json())
       .catch((error) => this.handleError(error));
   }
+  // ------------------------------------------------------------
 
   static isEmpty(data: Object): boolean {
     return Object.keys(data).length === 0;
