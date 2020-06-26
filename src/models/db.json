@@ -1,17 +1,6 @@
 {
   "pokemons": [
     {
-      "id": 1,
-      "name": "Bulbizarre",
-      "hp": 25,
-      "cp": 5,
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-      "types": [
-        "Plante",
-        "Poison"
-      ]
-    },
-    {
       "id": 2,
       "name": "Salamècheuh",
       "hp": "280",
@@ -19,16 +8,6 @@
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
       "types": [
         "Feu"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Carapuce",
-      "hp": 21,
-      "cp": 4,
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
-      "types": [
-        "Eau"
       ]
     },
     {
@@ -72,16 +51,6 @@
       "types": [
         "Normal",
         "Vol"
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Abo",
-      "hp": 16,
-      "cp": 4,
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/023.png",
-      "types": [
-        "Poison"
       ]
     },
     {
