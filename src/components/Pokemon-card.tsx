@@ -2,8 +2,7 @@ import React, { FunctionComponent, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import Pokemon from "../models/pokemon";
-
-import formaDate from "../helpers/format-date";
+import formatDate from "../helpers/format-date";
 import formatType from "../helpers/forma-type";
 
 import "./pokemon-card.css";
@@ -24,8 +23,8 @@ const PokemonCard: FunctionComponent<Props> = ({
     setColor(borderColor);
   };
 
-  const hideBoder = () => {
-    setColor("#f5f5f5"); // on remet la border en gris.
+  const hideBorder = () => {
+    setColor("#f5f5f5");
   };
 
   const goToPokemon = (id: number) => {
@@ -35,9 +34,9 @@ const PokemonCard: FunctionComponent<Props> = ({
   return (
     <div
       className="col s6 m4"
-      onClick={() => goToPokemon(pokemon.id)}
       onMouseEnter={showBorder}
-      onMouseLeave={hideBoder}
+      onMouseLeave={hideBorder}
+      onClick={() => goToPokemon(pokemon.id)}
     >
       <div className="card horizontal" style={{ borderColor: color }}>
         <div className="card-image">
@@ -47,7 +46,7 @@ const PokemonCard: FunctionComponent<Props> = ({
           <div className="card-content">
             <p>{pokemon.name}</p>
             <p>
-              <small>{formaDate(pokemon.created)}</small>
+              <small>{formatDate(pokemon.created)}</small>
             </p>
             {pokemon.types.map((type) => (
               <span key={type} className={formatType(type)}>
