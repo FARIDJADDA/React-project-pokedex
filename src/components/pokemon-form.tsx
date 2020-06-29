@@ -202,6 +202,8 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon, isEditForm }) => {
       pokemon.types = form.types.value;
       isEditForm ? updatePokemon() : addPokemon();
     }
+
+    console.log(pokemon);
   };
 
   const deletePokemon = () => {

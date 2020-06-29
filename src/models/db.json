@@ -92,6 +92,29 @@
       "types": [
         "Feu"
       ]
+    },
+    {
+      "id": 1593470562679,
+      "hp": 100,
+      "cp": 10,
+      "name": "Lefa",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/100.png",
+      "types": [
+        "Normal",
+        "Electrik"
+      ]
+    },
+    {
+      "id": 1593470606555,
+      "hp": 100,
+      "cp": 10,
+      "name": "Val",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/151.png",
+      "types": [
+        "Normal",
+        "Combat",
+        "Psy"
+      ]
     }
   ]
 }

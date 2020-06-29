@@ -30,7 +30,7 @@ const PokemonCard: FunctionComponent<Props> = ({
   const goToPokemon = (id: number) => {
     history.push(`/pokemons/${id}`);
   };
-
+  console.log(Pokemon);
   return (
     <div
       className="col s6 m4"

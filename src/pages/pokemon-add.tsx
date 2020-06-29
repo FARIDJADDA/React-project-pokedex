@@ -8,6 +8,8 @@ const PokemonsAdd: FunctionComponent = () => {
   const [id] = useState<number>(new Date().getTime()); // ientifiant unique pour le new pokemon (get time 1er janvier 1970)
   const [pokemon] = useState<Pokemon>(new Pokemon(id)); // new pokemon vierge
 
+  console.log(Pokemon);
+
   return (
     <div className="row">
       <h2 className="header center">Ajouter un pokemon</h2>
