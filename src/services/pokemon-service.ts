@@ -50,6 +50,13 @@ export default class PokemonService {
 
   //  ------------------------------------------------------------
 
+  static searchPokemon(term: string): Promise<Pokemon[]> {
+    // retourne un promesse avec un tableau de pokemon
+    return fetch(`http://localhost:3001/pokemons?q=${term}`) // Filtre les ppokemons d'apres leurs nom en fonction d'un term de recherche entré par l'utilisateur
+      .then((response) => response.json())
+      .catch((error) => this.handleError(error));
+  }
+
   static isEmpty(data: Object): boolean {
     return Object.keys(data).length === 0;
   }

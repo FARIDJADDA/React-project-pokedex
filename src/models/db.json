@@ -115,6 +115,17 @@
         "Combat",
         "Psy"
       ]
+    },
+    {
+      "id": 1593471125840,
+      "hp": 100,
+      "cp": 10,
+      "name": "Savage",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/178.png",
+      "types": [
+        "Normal",
+        "Poison"
+      ]
     }
   ]
 }

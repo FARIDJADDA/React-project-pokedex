@@ -3,7 +3,9 @@ import Pokemon from "../models/pokemon";
 
 import PokemonService from "../services/pokemon-service";
 import { Link } from "react-router-dom";
+
 import PokemonCard from "../components/Pokemon-card";
+import PokemonSearch from "../components/pokemon-search";
 
 const PokemonList: FunctionComponent = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -17,6 +19,7 @@ const PokemonList: FunctionComponent = () => {
       <h1 className="center">Pokédex</h1>
       <div className="container">
         <div className="row">
+          <PokemonSearch />
           {pokemons.map((pokemon) => (
             <PokemonCard key={pokemon.id} pokemon={pokemon} />
           ))}
